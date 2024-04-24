@@ -28,9 +28,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           </figure>
           <h3 className="px-4 py-2 text-left">{project.title}</h3>
           <div className="card-actions justify-end p-3">
-            {project.badges.map((badge) => {
-              return <Badge key={badge}>{badge}</Badge>;
-            })}
+            <Badge>{project.badge}</Badge>
           </div>
         </div>
       </button>

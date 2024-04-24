@@ -3,7 +3,7 @@ export type Project = {
   title: string;
   image: string;
   description: string;
-  badges: string[];
+  badge: string;
   github?: string;
   link?: string;
 };
