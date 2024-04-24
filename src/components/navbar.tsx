@@ -1,10 +1,11 @@
-import Link from 'next/link';
+import DesktopLink from '@/components/base/desktop-link';
+import MobileLink from './base/mobile-link';
 
 export default function Navbar() {
   return (
     <>
       {/* Desktop */}
-      <div className="hidden sm:navbar fixed shadow-lg bg-secondary text-primary">
+      <div className="hidden sm:navbar fixed shadow-lg bg-secondary text-primary z-50">
         <div className="flex-1 pl-8 h-20">
           {/* Logo */}
           <svg width="72px" height="80px" viewBox="0 0 72 80" version="1.1">
@@ -61,18 +62,8 @@ export default function Navbar() {
           </svg>
         </div>
         <div className="flex-none pr-8">
-          <Link
-            href="/"
-            className="px-3 py-2 rounded-md bg-none text-sm font-medium mr-3 hover:text-accent"
-          >
-            Home
-          </Link>
-          <Link
-            href="/projects"
-            className="px-3 py-2 rounded-md text-sm font-medium mr-3 hover:text-accent"
-          >
-            Projects
-          </Link>
+          <DesktopLink href="/">Home</DesktopLink>
+          <DesktopLink href="/projects">Projects</DesktopLink>
           <label className="swap swap-rotate hover:fill-accent">
             {/* this hidden checkbox controls the state */}
             <input type="checkbox" className="theme-controller" value="dark" />
@@ -99,19 +90,9 @@ export default function Navbar() {
       </div>
 
       {/* Mobile */}
-      <div className="sm:hidden fixed btm-nav bg-secondary text-primary">
-        <Link
-          href="/"
-          className="text-dark-green hover:text-accent px-3 py-2 text-sm font-medium mr-3"
-        >
-          Home
-        </Link>
-        <Link
-          href="/projects"
-          className="text-dark-green hover:text-accent px-3 py-2 text-sm font-medium mr-3"
-        >
-          Projects
-        </Link>
+      <div className="sm:hidden fixed btm-nav bg-secondary text-primary z-50">
+        <MobileLink href="/">Home</MobileLink>
+        <MobileLink href="/projects">Projects</MobileLink>
         <label className="swap swap-rotate">
           {/* this hidden checkbox controls the state */}
           <input type="checkbox" className="theme-controller" value="dark" />
