@@ -1,9 +1,10 @@
+import MainSection from '@/components/base/main-section';
 import Redirect from '@/components/base/redirect';
 import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex justify-center items-center flex-col p-5 pb-16 sm:p-10 sm:pt-32 bg-primary text-secondary">
+    <MainSection>
       <Image
         src="/icon.svg"
         className="mb-10 sm:hidden"
@@ -56,6 +57,6 @@ export default function Home() {
           LinkedIn
         </Redirect>
       </div>
-    </main>
+    </MainSection>
   );
 }

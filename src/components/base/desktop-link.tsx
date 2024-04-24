@@ -17,7 +17,7 @@ export default function DesktopLink({
       href={href}
       className={
         currentPath === href
-          ? 'btn btn-outline border-primary text-primary m-2'
+          ? 'btn btn-outline border-primary text-primary m-2 cursor-default hover:border-primary hover:text-primary'
           : 'btn btn-outline border-secondary text-primary m-2 hover:bg-primary hover:text-secondary hover:border-secondary'
       }
     >
